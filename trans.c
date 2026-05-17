@@ -1,5 +1,3 @@
-// Transaction Processing System
-// Mini project: fixed-format random-access record file (credit.dat)
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +8,6 @@
 #define FIRST_NAME_MAX 9
 #define NEGATIVE_BALANCE_LIMIT (-1000.0)
 
-// clientData structure definition
 struct clientData
 {
     unsigned int acctNum; // account number
@@ -19,7 +16,6 @@ struct clientData
     double balance;       // account balance
 };
 
-// prototypes (snake_case)
 static unsigned int enter_choice(void);
 static void write_accounts_txt(FILE *read_ptr);
 static void update_record(FILE *file_ptr);
@@ -101,7 +97,7 @@ static int is_valid_acct_num(unsigned int acct_num)
 
 static int is_valid_balance(double balance)
 {
-    // Faculty hint: limit negative balance
+ 
     return balance >= NEGATIVE_BALANCE_LIMIT;
 }
 
